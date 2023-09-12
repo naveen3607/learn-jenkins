@@ -8,22 +8,22 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Hello World'
+                echo 'Test'
             }
         }
         stage('Code Quality') {
             steps {
-                echo 'Hello World'
+                echo 'Code Quality'
             }
         }
         stage('Code Security') {
             steps {
-                echo 'Hello World'
+                echo 'Code Security'
             }
         }
         stage('App Deploy') {
             steps {
-                echo 'Hello World'
+                echo 'App Deploy'
             }
         }
     }
