@@ -1,11 +1,17 @@
 pipeline {
     agent { node { label 'workstation' } }
     stages {
-        stage('Hello') {
+        stage('Compile') {
             steps {
                 echo 'Hello World'
                 error 'This is an error'
             }
+        }
+    }
+
+    post {
+        always {
+          echo 'post'
         }
     }
 }
