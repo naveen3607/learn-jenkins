@@ -2,6 +2,7 @@ pipeline {
     agent { node { label 'workstation' } }
     environment {
         Test_URL = "google.com"
+        SSH = credentials("centos-ssh")
     }
 
     stages {
@@ -10,6 +11,7 @@ pipeline {
                 //echo 'Hello World'
                 //error 'This is an error'
                 echo Test_URL
+                echo SSH
             }
         }
     }
