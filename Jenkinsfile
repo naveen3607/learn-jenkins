@@ -56,12 +56,3 @@ pipeline {
         }
     }
 }
-
-/*
-
-node('workstation') {
-  def x:integer = 10
-  stage('Test'){
-      print x
-  }
-} */
