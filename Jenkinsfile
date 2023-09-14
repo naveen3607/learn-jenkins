@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
     agent { node { label 'workstation' } }
     environment {
         Test_URL = "google.com"
@@ -21,7 +21,7 @@ pipeline {
             password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
      }
 
-     triggers { pollSCM('*/1 * * * *') }
+     triggers { pollSCM('* * * * *') }
 
      tools {
          maven 'maven'
@@ -55,4 +55,14 @@ pipeline {
           echo 'post'
         }
     }
+}*/
+
+node('workstation') {
+  def x:integer = 10
+  env.y = 20
+  stage('Test') {
+    print x
+    sh 'echo y - ${y}'
+  }
 }
+
