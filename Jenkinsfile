@@ -29,6 +29,10 @@ pipeline {
 
     stages {
         stage('Compile') {
+            input {
+                message "Should I Continue?"
+                ok "Yes, you should."
+            }
             steps {
                 //echo 'Hello World'
                 //error 'This is an error'
