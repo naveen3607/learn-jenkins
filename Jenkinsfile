@@ -33,6 +33,11 @@ pipeline {
                 message "Should I Continue?"
                 ok "Yes, you should."
             }
+
+            when {
+                branch 'production'
+            }
+
             steps {
                 //echo 'Hello World'
                 //error 'This is an error'
